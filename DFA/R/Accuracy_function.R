@@ -5,10 +5,6 @@
 #' @param partitioned_list previously partitioned data using the partition function
 #' @keywords Accuracy
 #' @export
-
-
-#### Tests for Accuracy
-
 Accuracy <- function(train_pred, test_pred, partitioned_list) {
   test <- mean(test_pred$class==x$test$Species)
   train <- mean(train_pred$class==x$train$Species)

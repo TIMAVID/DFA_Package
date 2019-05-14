@@ -4,9 +4,6 @@
 #' @param p fraction of observations allocated to training set
 #' @keywords partition
 #' @export
-
-#### Split the data into training (80%) and test (20%) sets
-
 Partition <- function(x, p=.8) {
   sample <- sample.int(n = nrow(x), size = floor(p*nrow(x)), replace = F)
   train <- x[sample, ]

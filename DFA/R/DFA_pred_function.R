@@ -4,9 +4,6 @@
 #' @param data data used to predict group assignments
 #' @keywords Prediction
 #' @export
-
-#### Create your model and use your model to predict group membership
-
 DFA_pred <- function(model, data) {
   LDA_object <- MASS::lda(model, data)
   Predict.lda.values <- predict(LDA_object, data)

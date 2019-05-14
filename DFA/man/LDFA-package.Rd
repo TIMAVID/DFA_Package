@@ -9,7 +9,7 @@
 This package allows you to run a simple linear discriminant function analysis.
 }
 \author{
-\strong{Maintainer}: David, Hans Ledesma, Bilger \email{ledesma-david@utexas.edu}
+\strong{Maintainer}: David Ledesma, Hans Bilger \email{ledesma-david@utexas.edu}
 
 }
 \keyword{internal}

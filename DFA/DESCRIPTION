@@ -2,8 +2,8 @@ Package: LDFA
 Title: DFA Package
 Version: 0.0.1.0
 Authors@R: 
-    person(given = "David, Hans",
-           family = "Ledesma, Bilger",
+    person(given = "David Ledesma,",
+           family = "Hans Bilger",
            role = c("aut", "cre"),
            email = "ledesma-david@utexas.edu",
            )

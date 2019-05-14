@@ -3,10 +3,6 @@
 #' @param data predicted group assignments derived from the DFA_pred function.
 #' @keywords Prediction plot
 #' @export
-
-
-#### Plotting the result in ggplot
-
 DFA_plot <- function(data) {
   v <- as.data.frame(data)
   g<- ggplot2::ggplot(v, aes(v$x.LD1, v$x.LD2)) +
