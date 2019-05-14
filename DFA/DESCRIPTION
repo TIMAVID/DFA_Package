@@ -2,11 +2,13 @@ Package: LDFA
 Title: DFA Package
 Version: 0.0.1.0
 Authors@R: 
-    person(given = "David & Hans",
-           family = "Ledesma & Bilger",
+    person(given = "David and Hans",
+           family = "Ledesma, Bilger",
            role = c("aut", "cre"),
+           email = "ledesma-david@utexas.edu",
            )
 Description: This package allows you to run a simple linear discriminant function analysis.
+Depends: R (>= 3.5.2)
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
