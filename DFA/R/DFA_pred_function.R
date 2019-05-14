@@ -1,13 +1,3 @@
-#### Split the data into training (80%) and test (20%) sets
-
-Partition <- function(x, p=.8) {
-  sample <- sample.int(n = nrow(x), size = floor(p*nrow(x)), replace = F)
-  train <- x[sample, ]
-  test  <- x[-sample, ]
-  return(list(train=train,test=test))
-}
-x <- Partition(iris)
-
 #### Create your model and use your model to predict group membership
 
 DFA_pred <- function(model, data) {
