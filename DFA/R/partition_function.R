@@ -4,8 +4,6 @@
 #' @param p fraction of observations allocated to training set
 #' @keywords partition
 #' @export
-#' @examples
-Partition (x, p=.8)
 
 #### Split the data into training (80%) and test (20%) sets
 
