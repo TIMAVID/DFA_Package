@@ -1,3 +1,10 @@
+#' @title A function to predict groups assignments.
+#' @description This function takes a specified model of your groups ~ predictor variables and then uses that model to predict group membership of you specified data.
+#' @param model groups ~ predictor variables
+#' @param data data used to predict group assignments
+#' @keywords Prediction
+#' @export
+
 #### Create your model and use your model to predict group membership
 
 DFA_pred <- function(model, data) {
@@ -6,31 +13,4 @@ DFA_pred <- function(model, data) {
   return(Predict.lda.values)
 }
 
-y <- DFA_pred(Species~., x$train)
-p <- DFA_pred(Species~., x$test)
-
-#### Plotting the result in ggplot
-
-DFA_plot <- function(data) {
-  v <- as.data.frame(data)
-  g<- ggplot2::ggplot(v, aes(v$x.LD1, v$x.LD2)) +
-    geom_point(aes(color = v$class))
-  g <- g + ggplot2::ggtitle("LDA Predictions")
-  g <- g + ggplot2::xlab("LD1")
-  g <- g + ggplot2::ylab("LD2")
-}
-
-h <- DFA_plot(y)
-h
-t <-DFA_plot(p)
-t
-
-#### Tests for Accuracy
-
-Accuracy <- function(train_pred, test_pred, partitioned_list) {
-  test <- mean(test_pred$class==x$test$Species)
-  train <- mean(train_pred$class==x$train$Species)
-  return(list(train=train,test=test))
-}
-Accuracy(y, p, x)
 
