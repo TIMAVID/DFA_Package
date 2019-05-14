@@ -13,3 +13,6 @@ Description: For running a simple linear discriminant function analysis
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
+Imports: 
+    ggplot2,
+    MASS
