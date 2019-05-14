@@ -3,10 +3,11 @@
 #' @param train_pred predicted assignments of training data
 #' @param test_pred predicted assignments of test data
 #' @param partitioned_list previously partitioned data using the partition function
-#' @keywords accuracy
+#' @keywords Accuracy
 #' @export
-#' @examples
-Accuracy(train_pred, test_pred, x)
+
+
+#### Tests for Accuracy
 
 Accuracy <- function(train_pred, test_pred, partitioned_list) {
   test <- mean(test_pred$class==x$test$Species)
