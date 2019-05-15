@@ -28,7 +28,7 @@ Partition <- function(x, p=.8) {
 #' @export
 DFA_plot <- function(data) {
   v <- as.data.frame(data)
-  g<- ggplot2::ggplot(v, aes(v$x.LD1, v$x.LD2)) +
+  g<- ggplot2::ggplot(v, ggplot2::aes(v$x.LD1, v$x.LD2)) +
     ggplot2::geom_point(ggplot2::aes(color = v$class))
   g <- g + ggplot2::ggtitle("LDA Predictions")
   g <- g + ggplot2::xlab("LD1")
@@ -46,3 +46,4 @@ Accuracy <- function(train_pred, test_pred, partitioned_list) {
   train <- mean(train_pred$class==x$train$Species)
   return(list(train=train,test=test))
 }
+

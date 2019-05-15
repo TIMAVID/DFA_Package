@@ -31,21 +31,15 @@ library(LDFA)
 # How does a discriminant function anaysis work?
 
 > The analysis creates "discriminant functions" using linear combinations of predictor variables. The number of functions is equal to either one less than the number of groups or the number of predictors—whichever is smaller. Each discriminant function maximizes the amount of discrimination between groups while also remaining non-correlated with the other discriminant functions. The model made from these discriminant functions can then be used to predict group membership on a new, uncharacterized sample.
-
 # We use the built in dataset "iris" for this example.
 
-![Alt text](img/Fig1.jpg)
-![Alt text](img/Screen Shot 2019-05-02 at 10.50.11 AM.png)
-
 > Split the data into training (80%) and test (20%) sets
-
 ```{r}
 Partition(iris) 
 x<- Partition(iris) # This function partitions your dataset into test and training subsets at a ratio of 20% to 80% as the default. You should store this in a separate variable which will keep two lists associated witht the test and training data.
 ```
 
 > Create your model:
-
 ```{r}
 DFA_pred(Species~., x$train)
 y <- DFA_pred(Species~., x$train) # This function takes a specified model (your groups ~ predictor variables) and then uses that model to predict group membership of you specified data. In this case we have specified the training data.
@@ -53,7 +47,6 @@ z <- DFA_pred(Species~., x$test)
 ```
 
 > Plotting the result in ggplot:
-
 ```{r}
 DFA_plot(y)
 g <- DFA_plot(y) # This function takes the prediction data derived from the DFA_pred function and plots it using ggplot.
@@ -61,10 +54,7 @@ g
 ```
 
 > Now, test the accuracy of your model by calculating the fraction of correct classifications.
-
 ```{r}
 Accuracy(y, NULL, x)
 a <- Accuracy(y, z, x) # This function takes your predicted group assignments of the training and test data and compares it to the actual group assignments. It then takes the mean to show the porpotion correct for each dataset. In this case we did not use the test data to make predictions so we set the input to NULL. 
 ```
-
-
