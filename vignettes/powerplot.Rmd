@@ -37,6 +37,7 @@ library(LDFA)
 
 ```{r}
 x<- Partition(iris) # This function partitions your dataset into test and training subsets at a ratio of 20% to 80% as the default. You should store this in a separate variable which will keep two lists associated witht the test and training data.
+d <- as.factor(x$test$Species)
 ```
 
 > Create your model:
@@ -57,6 +58,6 @@ g
 > Now, test the accuracy of your model by calculating the fraction of correct classifications.
 
 ```{r}
-Accuracy(z, x$test$Species)
-# This function takes your predicted group assignments of the training and test data and compares it to the actual group assignments. It then takes the mean to show the porpotion correct for each dataset. 
+Accuracy(z, d)
+# This function takes your predicted group assignments of the training and test data and compares it to the actual group assignments. It then takes the mean to show the porpotion correct for each dataset. Where d is a factor of the group assignments of the origional dataset. 
 ```
