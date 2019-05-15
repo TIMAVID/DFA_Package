@@ -35,13 +35,11 @@ library(LDFA)
 
 > Split the data into training (80%) and test (20%) sets
 ```{r}
-Partition(iris) 
 x<- Partition(iris) # This function partitions your dataset into test and training subsets at a ratio of 20% to 80% as the default. You should store this in a separate variable which will keep two lists associated witht the test and training data.
 ```
 
 > Create your model:
 ```{r}
-DFA_pred(Species~., x$train)
 y <- DFA_pred(Species~., x$train) # This function takes a specified model (your groups ~ predictor variables) and then uses that model to predict group membership of you specified data. In this case we have specified the training data.
 z <- DFA_pred(Species~., x$test)
 ```
