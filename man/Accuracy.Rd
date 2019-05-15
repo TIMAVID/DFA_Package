@@ -4,14 +4,12 @@
 \alias{Accuracy}
 \title{A function to test the accuracy of LDFA groups assignments.}
 \usage{
-Accuracy(train_pred, test_pred, x)
+Accuracy(test_pred, partitioned_list_class)
 }
 \arguments{
-\item{train_pred}{predicted assignments of training data}
-
 \item{test_pred}{predicted assignments of test data}
 
-\item{x}{previously partitioned data using the partition function}
+\item{partitioned_list_class}{class categories of previously partitioned data}
 }
 \description{
 This function takes your predicted group assignments of the training and test data and compares it to the actual group assignments. It then takes the mean to show the porpotion correct for each dataset.

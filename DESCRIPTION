@@ -15,7 +15,7 @@ LazyData: true
 Imports: 
     ggplot2,
     MASS
-RoxygenNote: 6.1.1
+RoxygenNote: 6.1.1.9000
 Suggests: 
     knitr,
     rmarkdown
