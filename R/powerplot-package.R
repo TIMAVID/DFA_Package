@@ -38,7 +38,7 @@ DFA_plot <- function(data) {
 #' @description This function takes your predicted group assignments of the training and test data and compares it to the actual group assignments. It then takes the mean to show the porpotion correct for each dataset.
 #' @param train_pred predicted assignments of training data
 #' @param test_pred predicted assignments of test data
-#' @param partitioned_list_class previously partitioned data using the partition function
+#' @param partitioned_list_class class categories of previously partitioned data
 #' @keywords Accuracy
 #' @export
 Accuracy <- function(train_pred, test_pred, partitioned_list_class) {
