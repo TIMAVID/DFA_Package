@@ -43,7 +43,6 @@ DFA_plot <- function(data) {
 #' @export
 Accuracy <- function(train_pred, test_pred, partitioned_list_class) {
   test <- mean(test_pred$class==partitioned_list_class)
-  train <- mean(train_pred$class==partitioned_list_class)
-  return(list(train=train,test=test))
+  return(list(test=test))
 }
 
